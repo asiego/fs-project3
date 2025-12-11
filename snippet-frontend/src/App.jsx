@@ -1,25 +1,19 @@
 import { useEffect, useState } from "react";
 import SnippetForm from "./components/SnippetForm";
 import SnippetList from "./components/SnippetList";
-import { getSnippets } from "./api/snippets";
 
 export default function App() {
-  const [snippets, setSnippets] = useState([]);
+  const [reload, setReload] = useState(0);
 
-  async function loadSnippets() {
-    const data = await getSnippets();
-    setSnippets(data);
+  function handleSnippetCreated() {
+    setReload(prev => prev + 1); // Trigger reload
   }
-
-  useEffect(() => {
-    loadSnippets();
-  }, []);
 
   return (
     <div style={{ padding: "20px" }}>
-      <h1>Snippet Manager</h1>
-      <SnippetForm />
-      <SnippetList />
+      <h1>Code Snippet Library</h1>
+      <SnippetForm onSnippetCreated={handleSnippetCreated} />
+      <SnippetList reload={reload} />
     </div>
   );
 }

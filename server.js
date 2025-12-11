@@ -14,7 +14,7 @@ console.log("MongoDB URI:", process.env.MONGO_URI);
 
 // routes
 const snippetRoutes = require('./routes/snippets');
-app.use('/snippets', snippetRoutes);
+app.use('/api/snippets', snippetRoutes);
 
 // API routes
 app.get('/api/routes', (req, res) => {
