@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = "https://fs-project2-v33l.onrender.com/api/snippets";
+const API_URL = "https://fs-project3-ymeb.onrender.com";
 
 // GET all snippets
 export const getSnippets = async () => {
