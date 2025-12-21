@@ -44,4 +44,4 @@ But since this is something I could use for all future personal and professional
 3. create .env file for mongo
 4. start backend (npm run dev)
 5. setup frontend with same commands in snippet-frontend
-6. Test API with either browser postman or similar (hosted @ https://fs-project3-ymeb.onrender.com)
+6. Test API with browser or with postman / similar (hosted @ https://fs-project3-ymeb.onrender.com)
